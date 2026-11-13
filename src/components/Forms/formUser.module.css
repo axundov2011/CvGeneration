@@ -1,0 +1,216 @@
+.page {
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: 28px 20px 56px;
+  color: #1f2937;
+  background: linear-gradient(145deg, #303030, #454545 55%, #353535);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+  width: min(100%, 860px);
+  margin: 0 auto;
+}
+
+.title {
+  margin: 0 0 34px;
+  color: #f3f4f6;
+  font-size: clamp(2.3rem, 8vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 44px;
+}
+
+.input {
+  width: 100%;
+  min-height: 52px;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  border: 2px solid #c6c6c6;
+  border-radius: 8px;
+  color: #171717;
+  background: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  font: inherit;
+  font-size: 1.15rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #777;
+  opacity: 1;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.formActions,
+.cardActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.formActions {
+  justify-content: flex-start;
+}
+
+.addButton,
+.removeAllButton,
+.editButton,
+.removeButton {
+  min-height: 48px;
+  padding: 9px 18px;
+  border: 0;
+  border-radius: 9px;
+  color: #fff;
+  font: inherit;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.addButton,
+.editButton {
+  background: #3168df;
+}
+
+.removeAllButton,
+.removeButton {
+  background: #d9434d;
+}
+
+.addButton:hover,
+.removeAllButton:hover,
+.editButton:hover,
+.removeButton:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.userCard {
+  min-height: 250px;
+  box-sizing: border-box;
+  padding: 28px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 9px;
+  background: #d5dbe1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.userList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 20px;
+}
+
+.emptyState {
+  margin: 0;
+  padding: 28px 20px;
+  color: #d1d5db;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  border-radius: 9px;
+  text-align: center;
+}
+
+.userCard p {
+  margin: 12px 0;
+  color: #202124;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.userCard strong {
+  font-weight: 700;
+}
+
+.cardActions {
+  margin-top: 20px;
+}
+
+.editButton,
+.removeButton {
+  min-width: 90px;
+}
+
+.modalBackdrop {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.68);
+}
+
+.modal {
+  width: min(100%, 440px);
+  box-sizing: border-box;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  background: #f8fafc;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.5rem;
+}
+
+.closeButton {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  color: #475569;
+  background: #e2e8f0;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modalActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 24px 16px 40px;
+  }
+
+  .title {
+    margin-bottom: 28px;
+  }
+
+  .formActions {
+    justify-content: center;
+  }
+
+  .userCard {
+    min-height: 230px;
+  }
+}

@@ -1,0 +1,134 @@
+.page {
+  min-height: 100svh;
+  box-sizing: border-box;
+  padding: 18px;
+  color: #202428;
+  background: #202326;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.board {
+  width: min(100%, 1120px);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 16px 18px;
+  border: 1px solid #44494d;
+  border-radius: 12px;
+  background: #292d30;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+  margin: 0 -16px 14px;
+  padding: 10px 16px;
+  color: #e6f4f3;
+  background: #222629;
+  border-radius: 11px 11px 0 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  display: flex;
+  min-height: 142px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 12px 12px;
+  border: 2px solid #75e650;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.pending {
+  background: #f0d7d5;
+}
+
+.completed {
+  background: #d3fbf7;
+}
+
+.task {
+  display: -webkit-box;
+  min-height: 38px;
+  margin: 0;
+  overflow: hidden;
+  color: #293138;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.status {
+  color: #30363a;
+  font-size: 0.75rem;
+}
+
+.button {
+  min-width: 58px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  background: #54b7d5;
+  font: inherit;
+  font-size: 0.75rem;
+}
+
+.addedButton {
+  background: #327c78;
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.message {
+  margin: 0;
+  padding: 24px 12px;
+  color: #e6f4f3;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 10px;
+  }
+
+  .board {
+    padding: 0 10px 12px;
+  }
+
+  .title {
+    margin-right: -10px;
+    margin-left: -10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .card {
+    min-height: 132px;
+    padding: 11px 8px;
+  }
+}

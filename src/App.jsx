@@ -22,18 +22,25 @@ import EmojiPicker from './components/EmojiPicker';
 import FormatName from './components/FormatName';
 import ShowHidePassword from "./components/ShowHidePasspord";
 import InputSearchFilter from "./components/InputSearchFilter"
+import CurrentTime from "./components/CurrentTime";
+import Stopwatch from "./components/Stopwatch";
+import FormUser from './components/Forms/formUser';
+import CustomersValueOperations from "./components/CustomersValueOperations";
+import DataUsers from "./components/DataUsers";
+import TodosCardsFetch from "./components/TodosCardsFetch";
+import Comments from './components/Comments';
 
-const confettiColors = ['#ffd166', '#ef476f', '#06d6a0', '#118ab2', '#ffffff'];
-const TEAM_SIZE = 4;
-const withForm = (warrior) => ({
-  ...warrior,
-  base_experience: warrior.base_experience + Math.floor(Math.random() * 61) - 30,
-});
+// const confettiColors = ['#ffd166', '#ef476f', '#06d6a0', '#118ab2', '#ffffff'];
+// const TEAM_SIZE = 4;
+// const withForm = (warrior) => ({
+//   ...warrior,
+//   base_experience: warrior.base_experience + Math.floor(Math.random() * 61) - 30,
+// });
 
-const createTeams = () => ({
-  team1: shuffle(muslimArmy).slice(0, TEAM_SIZE).map(withForm),
-  team2: shuffle(qurayshArmy).slice(0, TEAM_SIZE).map(withForm),
-});
+// const createTeams = () => ({
+//   team1: shuffle(muslimArmy).slice(0, TEAM_SIZE).map(withForm),
+//   team2: shuffle(qurayshArmy).slice(0, TEAM_SIZE).map(withForm),
+// });
 
 function App() {
   // const [teams, setTeams] = useState(createTeams);
@@ -73,7 +80,7 @@ function App() {
         <CreateCounter /> */}
                 {/* <ChangeInputColor/> */}
 
-        <Forms/>
+        {/* <Forms/> */}
                 {/* <RandomJoker/> */}
 
         {/* <TemperaturConvert/> */}
@@ -81,6 +88,12 @@ function App() {
         {/* <FormatName /> */}
         {/* <ShowHidePassword/> */}
         {/* <InputSearchFilter/> */}
+        {/* <CurrentTime/> */}
+        {/* <FormUser/> */}
+        {/* <CustomersValueOperations/> */}
+        {/* <TodosCardsFetch/> */}
+        {/* <Comments/> */}
+        <Forms/>
     </>
 
 
